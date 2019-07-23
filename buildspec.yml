@@ -5,12 +5,15 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
+      - pip install --upgrade pip
       - pip install --upgrade awscli
   pre_build:
     commands:
+      - ls -la
       - npm install
   build:
     commands:
+      - ls -la
       - npm run build:$ENVIRONMENT
   post_build:
     commands:
